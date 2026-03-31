@@ -2,15 +2,13 @@
 
 using JSON3
 
-#<step explain="For this program we need some test data, as JSON">
 const SAMPLE_JSON = 
 [
     {"name":"Homework", "minutes":45},
     {"name":"Workout", "minutes":30},
     {"name":"Reading", "minutes":20}
 ]
-#</step>
-
+#<step explain="Our first two functions are simple returns">
 function parse_tasks(json_text::String)
     return JSON3.read(json_text)
 end
@@ -19,6 +17,9 @@ function task_count(tasks)
     return length(tasks)
 end
 
+#</step>
+
+#<step explain="These functions calculate and return">
 function total_minutes(tasks)
     total = 0
     for task in tasks
@@ -41,7 +42,7 @@ function average_minutes(tasks)
     end
     return total_minutes(tasks) / count
 end
-#<step explain="Here is the end of the program, printing all the tasks data we've processed">
+#</step>
 function main()
     tasks = parse_tasks(SAMPLE_JSON)
 
@@ -54,4 +55,3 @@ function main()
 end
 
 main()
-#</step>
