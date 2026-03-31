@@ -1,18 +1,16 @@
 
 
-#<step explain="First we need to import">
 using JSON3
-#</step>
 
-
+#<step explain="For this program we need some test data, as JSON">
 const SAMPLE_JSON = 
 [
     {"name":"Homework", "minutes":45},
     {"name":"Workout", "minutes":30},
     {"name":"Reading", "minutes":20}
 ]
+#</step>
 
-#<step explain="Here is the full code">
 function parse_tasks(json_text::String)
     return JSON3.read(json_text)
 end
@@ -43,7 +41,7 @@ function average_minutes(tasks)
     end
     return total_minutes(tasks) / count
 end
-
+#<step explain="Here is the end of the program, printing all the tasks data we've processed">
 function main()
     tasks = parse_tasks(SAMPLE_JSON)
 
