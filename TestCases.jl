@@ -1,7 +1,9 @@
 
 
-
+#<step explain="First we need to import">
 using JSON3
+#</step>
+
 
 const SAMPLE_JSON = 
 [
@@ -10,6 +12,7 @@ const SAMPLE_JSON =
     {"name":"Reading", "minutes":20}
 ]
 
+#<step explain="Here is the full code">
 function parse_tasks(json_text::String)
     return JSON3.read(json_text)
 end
@@ -53,3 +56,4 @@ function main()
 end
 
 main()
+#</step>
