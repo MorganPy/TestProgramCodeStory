@@ -1,7 +1,7 @@
-#</step>
 
-#<step explain="Valid inner set, invalid outer set">
-println("Step Open 1")
-#</step>
 
-#<step explain="Invalid order for step explain">
+
+
+println("Before step open")
+#<step explain="Only open syntax test">
+println("After step open")
