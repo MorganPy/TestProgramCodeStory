@@ -2,6 +2,7 @@
 
 
 
-println("Before step open")
-#<step explain="Only open syntax test">
-println("After step open")
+#<step explain="How do make lasagna, Gemini?" enrich>
+println("Gemini, how do I make lasagna?")
+
+#</step>
